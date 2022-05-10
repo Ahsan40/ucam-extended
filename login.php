@@ -3,7 +3,6 @@
 <html lang="en">
 <?php
     require_once './header.php';
-    require_once INCLUDES['login-function'];
     require_once INCLUDES['signup-function'];
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
