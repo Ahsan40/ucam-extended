@@ -15,8 +15,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
             if ($result) {
                 if (mysqli_num_rows($result) > 0) {
-                    $_SESSION['user_name'] = $user_name;
-                    header("Location: " . PAGES['home']);
+                    $_SESSION = mysqli_fetch_assoc($result);
+                    if (strcmp($_SESSION['user_type'], "admin") == 0)
+                        header("Location:" . PAGES['admin']);
+                    else
+                        header("Location:" . PAGES['home']);
                     die;
                 }
             }
