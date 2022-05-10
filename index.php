@@ -11,5 +11,6 @@
     <body>
 <!--    --><?php //require_once INCLUDES['nav-main-template']; ?>
 <!--    --><?php //require_once INCLUDES['nav-logged-template']; ?>
+
     </body>
 </html>

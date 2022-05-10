@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         $c_password = $_POST['confirm_passwords'];
 //        $duplicate = mysqli_num_rows($conn->query("SELECT student_id FROM users WHERE student_id ='$student_id'")) > 0;
 
-        if (empty($student_id) && !empty($password)) {
+        if (!empty($student_id) && !empty($password) && !empty($c_password)) {
             $query = "INSERT INTO users(student_id, password) VALUES('$student_id','$password')";
             $result = mysqli_query($conn, $query);
             header("Location: " . PAGES['login']);
