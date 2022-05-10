@@ -3,43 +3,13 @@
 <html lang="en">
 <?php
     require_once './header.php';
+    require_once INCLUDES['signup-function'];
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-    $student_id = $_POST['student_id'];
-    $password = $_POST['passwords'];
-    if (strcmp($_POST['operation'], 'signin') == 0) {
-        if (!empty($student_id) && !empty($password)) {
-            //here we read from database and verify the username and password
-            $query = "SELECT * FROM users WHERE student_id = '$student_id' AND password = '$password'";
-            $result = mysqli_query($conn, $query);
-
-            if ($result) {
-                if (mysqli_num_rows($result) > 0) {
-                    $_SESSION['student_id'] = $student_id;
-                    header("Location: " . PAGES['home']);
-                    die;
-                }
-            }
-
-            echo "wrong username or password!";
-        } else {
-            echo "Email or password cannot be empty!";
-        }
-    } else {
-        $student_id = $_POST['student_id2'];
-        $password = $_POST['passwords2'];
-        $c_password = $_POST['confirm_passwords'];
-//        $duplicate = mysqli_num_rows($conn->query("SELECT student_id FROM users WHERE student_id ='$student_id'")) > 0;
-
-        if (empty($student_id) && !empty($password)) {
-            $query = "INSERT INTO users(student_id, password) VALUES('$student_id','$password')";
-            $result = mysqli_query($conn, $query);
-            header("Location: " . PAGES['login']);
-            die();
-        } else {
-            echo "Signup Failed!";
-        }
-    }
+    if (strcmp($_POST['operation'], 'signin') == 0)
+        login($conn, $_POST);
+    else
+        register($conn, $_POST);
 }
 ?>
 
@@ -72,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                 <div class="form-inner">
                     <form action="#" method="post" class="login">
                         <div class="field">
-                            <input type="text" name="student_id" placeholder="Student ID" required>
+                            <input type="text" name="user_name" placeholder="Student ID/User Name" required>
                         </div>
                         <div class="field">
                             <input type="password" name="passwords" placeholder="Password" required>
@@ -87,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     </form>
                     <form action="#" method="post" class="signup">
                         <div class="field">
-                            <input type="text" name="student_id2" placeholder="Student ID" required>
+                            <input type="text" name="user_name2" placeholder="Student ID/User Name" required>
                         </div>
                         <div class="field">
                             <input type="password" name="passwords2" placeholder="Password" required>
