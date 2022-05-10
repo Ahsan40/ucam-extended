@@ -5,17 +5,17 @@
     require_once './header.php';
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-    $student_id = $_POST['student_id'];
+    $user_name = $_POST['user_name'];
     $password = $_POST['passwords'];
     if (strcmp($_POST['operation'], 'signin') == 0) {
-        if (!empty($student_id) && !empty($password)) {
+        if (!empty($user_name) && !empty($password)) {
             //here we read from database and verify the username and password
-            $query = "SELECT * FROM users WHERE student_id = '$student_id' AND password = '$password'";
+            $query = "SELECT * FROM users WHERE user_name = '$user_name' AND password = '$password'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
                 if (mysqli_num_rows($result) > 0) {
-                    $_SESSION['student_id'] = $student_id;
+                    $_SESSION['user_name'] = $user_name;
                     header("Location: " . PAGES['home']);
                     die;
                 }
@@ -26,13 +26,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             echo "Email or password cannot be empty!";
         }
     } else {
-        $student_id = $_POST['student_id2'];
+        $user_name = $_POST['user_name2'];
         $password = $_POST['passwords2'];
         $c_password = $_POST['confirm_passwords'];
-//        $duplicate = mysqli_num_rows($conn->query("SELECT student_id FROM users WHERE student_id ='$student_id'")) > 0;
+//        $duplicate = mysqli_num_rows($conn->query("SELECT user_name FROM users WHERE user_name ='$user_name'")) > 0;
 
-        if (!empty($student_id) && !empty($password) && !empty($c_password)) {
-            $query = "INSERT INTO users(student_id, password) VALUES('$student_id','$password')";
+        if (!empty($user_name) && !empty($password) && !empty($c_password)) {
+            $query = "INSERT INTO users(user_name, password) VALUES('$user_name','$password')";
             $result = mysqli_query($conn, $query);
             header("Location: " . PAGES['login']);
             die();
@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                 <div class="form-inner">
                     <form action="#" method="post" class="login">
                         <div class="field">
-                            <input type="text" name="student_id" placeholder="Student ID" required>
+                            <input type="text" name="user_name" placeholder="Student ID/User Name" required>
                         </div>
                         <div class="field">
                             <input type="password" name="passwords" placeholder="Password" required>
@@ -87,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     </form>
                     <form action="#" method="post" class="signup">
                         <div class="field">
-                            <input type="text" name="student_id2" placeholder="Student ID" required>
+                            <input type="text" name="user_name2" placeholder="Student ID/User Name" required>
                         </div>
                         <div class="field">
                             <input type="password" name="passwords2" placeholder="Password" required>
