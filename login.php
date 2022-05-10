@@ -7,13 +7,10 @@
     require_once INCLUDES['signup-function'];
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-    $user_name = $_POST['user_name'];
-    $password = $_POST['passwords'];
-    if (strcmp($_POST['operation'], 'signin') == 0) {
+    if (strcmp($_POST['operation'], 'signin') == 0)
         login($conn, $_POST);
-    } else {
+    else
         register($conn, $_POST);
-    }
 }
 ?>
 
