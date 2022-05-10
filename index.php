@@ -9,6 +9,7 @@
 <title>Home Page</title>
 </head>
     <body>
+    <h1> User Home </h1>
 <!--    --><?php //require_once INCLUDES['nav-main-template']; ?>
 <!--    --><?php //require_once INCLUDES['nav-logged-template']; ?>
 
