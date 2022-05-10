@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <?php
     require_once './header.php';
+    $user_data = check_login($conn);
 ?>
 
 <link rel="stylesheet" href="<?php echo CSS['styles.css']."?".time(); ?>">
