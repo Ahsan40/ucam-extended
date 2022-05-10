@@ -3,45 +3,16 @@
 <html lang="en">
 <?php
     require_once './header.php';
+    require_once INCLUDES['login-function'];
+    require_once INCLUDES['signup-function'];
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     $user_name = $_POST['user_name'];
     $password = $_POST['passwords'];
     if (strcmp($_POST['operation'], 'signin') == 0) {
-        if (!empty($user_name) && !empty($password)) {
-            //here we read from database and verify the username and password
-            $query = "SELECT * FROM users WHERE user_name = '$user_name' AND password = '$password'";
-            $result = mysqli_query($conn, $query);
-
-            if ($result) {
-                if (mysqli_num_rows($result) > 0) {
-                    $_SESSION = mysqli_fetch_assoc($result);
-                    if (strcmp($_SESSION['user_type'], "admin") == 0)
-                        header("Location:" . PAGES['admin']);
-                    else
-                        header("Location:" . PAGES['home']);
-                    die;
-                }
-            }
-
-            echo "wrong username or password!";
-        } else {
-            echo "Email or password cannot be empty!";
-        }
+        login($conn, $_POST);
     } else {
-        $user_name = $_POST['user_name2'];
-        $password = $_POST['passwords2'];
-        $c_password = $_POST['confirm_passwords'];
-//        $duplicate = mysqli_num_rows($conn->query("SELECT user_name FROM users WHERE user_name ='$user_name'")) > 0;
-
-        if (!empty($user_name) && !empty($password) && !empty($c_password)) {
-            $query = "INSERT INTO users(user_name, password) VALUES('$user_name','$password')";
-            $result = mysqli_query($conn, $query);
-            header("Location: " . PAGES['login']);
-            die();
-        } else {
-            echo "Signup Failed!";
-        }
+        register($conn, $_POST);
     }
 }
 ?>

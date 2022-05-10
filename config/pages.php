@@ -25,6 +25,7 @@
         'connection' => INC_DOMAIN . '/include/connection.php',
         'main-function' => INC_DOMAIN . '/include/main-function.php',
         'login-function' => INC_DOMAIN . '/include/login-function.php',
+        'signup-function' => INC_DOMAIN . '/include/signup-function.php',
         'nav-main-template' => INC_DOMAIN . '/template/nav-main.php',
         'nav-logged-template' => INC_DOMAIN . '/template/nav-menu-for-logged-user.php',
         'nav-non-logged-template' => INC_DOMAIN . '/template/nav-menu-for-non-logged-user.php'
