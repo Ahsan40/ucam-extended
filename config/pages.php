@@ -15,6 +15,7 @@
         'home' => DOMAIN . '/index.php',
         'login' => DOMAIN . '/login.php',
         'admin' => DOMAIN . '/admin/',
+        'logout' => DOMAIN . '/user/logout.php',
         'signup' => DOMAIN . '/signup.php',
         'profile' => DOMAIN . '/user/profile.php'
     );

@@ -10,6 +10,7 @@
 </head>
     <body>
     <h1> User Home </h1>
+    <center> <a href="<?php echo PAGES['logout']; ?>">Logout</a> </center>
 <!--    --><?php //require_once INCLUDES['nav-main-template']; ?>
 <!--    --><?php //require_once INCLUDES['nav-logged-template']; ?>
 
