@@ -991,7 +991,16 @@
     font-style: normal;
     font-weight: normal;
     font-size: 34px;
-    color: rgba(255,255,255,1);
+    
+
+    background-color: rgba(255,255,255,1);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 #Group_44 {
     position: absolute;
@@ -1025,6 +1034,15 @@
     font-weight: normal;
     font-size: 34px;
     color: rgba(255,255,255,1);
+
+    background-color: rgba(255,255,255,1);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 #Rectangle_71_cx {
     fill: url(#Rectangle_71_cx);
@@ -5432,7 +5450,7 @@
     top: 0px;
 }
 #Add_Seat {
-    left: 43.52px;
+    /* left: 43.52px;
     top: 14.086px;
     position: absolute;
     overflow: visible;
@@ -5443,7 +5461,20 @@
     font-style: normal;
     font-weight: normal;
     font-size: 34px;
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,1); */
+
+    
+        background-color: rgba(255,255,255,1);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    
 }
 #Group_59 {
     position: absolute;
@@ -5466,7 +5497,7 @@
 }
 #Reduce_Seat {
     left: 994px;
-    top: 1709.031px;
+    top: 1695.031px;
     position: absolute;
     overflow: visible;
     width: 190px;
@@ -5477,6 +5508,17 @@
     font-weight: normal;
     font-size: 34px;
     color: rgba(255,255,255,1);
+
+    background-color: rgba(255,255,255,1);
+        border: none;
+        
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
 }
 #Rectangle_63 {
     fill: rgba(255,255,255,1);

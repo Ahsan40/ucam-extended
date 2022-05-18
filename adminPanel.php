@@ -321,20 +321,20 @@
 	<div id="Bus_3">
 		<span>Bus 3</span>
 	</div>
-	<svg class="Rectangle_70">
+	<!-- <svg class="Rectangle_70">
 		<rect id="Rectangle_70" rx="0" ry="0" x="0" y="0" width="228" height="74">
 		</rect>
-	</svg>
+	</svg> -->
 	<div id="Add_Bus">
-		<span>Add Bus</span>
+		<button style="font-size: 30px; cursor: pointer;" type="submit" >Add Bus</button>
 	</div>
 	<div id="Group_44">
-		<svg class="Rectangle_69">
+		<!-- <svg class="Rectangle_69">
 			<rect id="Rectangle_69" rx="0" ry="0" x="0" y="0" width="228" height="74">
 			</rect>
-		</svg>
+		</svg> -->
 		<div id="Delete_Bus">
-			<span>Delete Bus</span>
+			<button style="font-size: 30px; cursor: pointer;" type="submit" >Delete Bus</button>
 		</div>
 	</div>
 	<svg class="Rectangle_71_cx">
@@ -1708,23 +1708,26 @@
 		<span>Bus 3</span>
 	</div>
 	<div id="Group_42">
-		<svg class="Rectangle_69_o">
+		<!-- <svg class="Rectangle_69_o">
 			<rect id="Rectangle_69_o" rx="0" ry="0" x="0" y="0" width="228" height="74">
 			</rect>
-		</svg>
+		</svg> -->
 		<div id="Add_Seat" onclick="">
 			
-			<span>Add Seat</span>
+			<button style="font-size: 30px; cursor: pointer;" type="submit" >Add Seat</button>
 		</div>
 	</div>
-	<div id="Group_59">
+
+	
+	<!-- <div id="Group_59">
 		<svg class="Rectangle_69_pa">
 			<rect id="Rectangle_69_pa" rx="0" ry="0" x="0" y="0" width="228" height="74">
 			</rect>
 		</svg>
-	</div>
+	</div> -->
 	<div id="Reduce_Seat">
-		<span>Reduce Seat</span>
+		<!-- <span>Reduce Seat</span> -->
+		<button style="font-size: 30px; cursor: pointer;" type="submit" >Reduce Seat</button>
 	</div>
 	<svg class="Rectangle_63">
 		<rect id="Rectangle_63" rx="0" ry="0" x="0" y="0" width="1697" height="730">
