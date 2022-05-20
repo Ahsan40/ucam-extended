@@ -12,9 +12,9 @@
 
     // Link / Pages
     const PAGES = array(
-        'home' => DOMAIN . '/index.php',
+        'home' => DOMAIN . '/home.php',
         'login' => DOMAIN . '/login.php',
-        'admin' => DOMAIN . '/admin/',
+        'admin' => DOMAIN . '/adminPanel.php',
         'logout' => DOMAIN . '/user/logout.php',
         'signup' => DOMAIN . '/signup.php',
         'profile' => DOMAIN . '/user/profile.php'
