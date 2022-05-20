@@ -38,7 +38,7 @@
 		</rect>
 	</svg>
 	<div id="Logout">
-		<span>Logout</span>
+		<span><button style="background-color: #F2531C; color: white">Logout</button></span>
 	</div>
 	<div id="Text">
 		<span>/</span>
@@ -47,7 +47,7 @@
 		<span>01118234</span>
 	</div>
 	<div id="Home">
-		<span>Home</span>
+		<span><a href="#" style="text-decoration: none; color: black">Home</a></span>
 	</div>
 	<div id="Student_Accounts">
 		<span>Student Accounts</span>
@@ -56,14 +56,17 @@
 		<span>Transport Registration</span>
 	</div>
 	<div id="Vaccine_Status" onclick="application.goToTargetView(event)">
-		<span>Vaccine Status</span>
+		<span>News Feed</span>
 	</div>
 	<div id="Registration">
-		<span>Registration</span>
+		<span><a href="table.php" style="text-decoration: none; color: black">Preferred Time</a></span>
 	</div>
 	<div onclick="application.goToTargetView(event)" id="Bus_Seat_Booking">
-		<span>Bus Seat Booking</span>
+		<span><a href="bus_booking.php" style="text-decoration: none; color:black;">Bus Seat Booking</a></span>
 	</div>
+
+	
+
 	<svg class="Rectangle_8_y">
 		<linearGradient id="Rectangle_8_y" spreadMethod="pad" x1="0.477" x2="1.088" y1="0.5" y2="0.5">
 			<stop offset="0" stop-color="#fe5e71" stop-opacity="1"></stop>

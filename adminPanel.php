@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bus_booking.css">
 <link rel="stylesheet" href="css/admin_panel.css">
 <title>Admin panel</title>
 <!-- <style id="applicationStylesheet" type="text/css">
@@ -21,10 +22,33 @@
 		<rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1931" height="50">
 		</rect>
 	</svg>
+	<svg class="Rectangle_2">
+        <rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1" height="1">
+        </rect>
+    </svg>
 	<svg class="Rectangle_4">
 		<rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="1941" height="4">
 		</rect>
 	</svg>
+	<div id="Current_221_-_Spring_2022_Seme">
+        <span>Current→</span><span style="color:rgba(112,112,112,1);"> </span><span style="color:rgba(207,108,108,1);">221 - Spring 2022 (Semester), 221 - Spring 2022 (Trimester)</span>
+      </div>
+      <div id="Registration_221_-_Spring_2022">
+        <span>Registration→ </span><span style="color:rgba(207,108,108,1);">221 - Spring 2022 (Semester), 222 - Summer 2022 (Trimester)</span>
+      </div>
+      <svg class="Rectangle_5">
+        <rect id="Rectangle_5" rx="2" ry="2" x="0" y="0" width="65.843" height="24.523">
+        </rect>
+      </svg>
+      <div id="Logout">
+        <span><button style="background-color: #F2531C; color: white">Logout</button></span>
+      </div>
+      <div id="Text">
+        <span>/</span>
+      </div>
+      <div id="n_1118234">
+        <span>01118234</span>
+      </div>
 	<div id="Home">
 		<span>Home</span>
 	</div>
@@ -46,6 +70,9 @@
 	<div id="Bus_">
 		<span>Bus </span>
 	</div>
+
+
+	
 	<svg class="Rectangle_59_t">
 		<linearGradient id="Rectangle_59_t" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
 			<stop offset="0" stop-color="#fe9365" stop-opacity="1"></stop>
