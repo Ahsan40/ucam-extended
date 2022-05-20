@@ -3,6 +3,10 @@
 <?php
     require_once './header.php';
     $user_data = check_login($conn);
+    if ($user_data['user_type'] == "user")
+        header("Location:" . PAGES['home']);
+    else
+        header("Location:" . PAGES['admin']);
 ?>
 
 <link rel="stylesheet" href="<?php echo CSS['styles.css']."?".time(); ?>">
