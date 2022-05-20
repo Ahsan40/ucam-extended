@@ -22,7 +22,7 @@ CREATE TABLE bus (
 
 CREATE TABLE s_shift (
     s_id INT NOT NULL AUTO_INCREMENT,
-    date time NOT NULL,
+    time time NOT NULL,
     CONSTRAINT pk_shift PRIMARY KEY(s_id)
 );
 
@@ -31,8 +31,9 @@ CREATE TABLE ticket (
      u_id INT NOT NULL,
      b_id INT NOT NULL,
      s_id INT NOT NULL,
+     round INT NOT NULL,
      seat varchar(3),
-     date timestamp NOT NULL DEFAULT current_timestamp(),
+     d timestamp NOT NULL DEFAULT current_timestamp(),
      CONSTRAINT pk_ticket PRIMARY KEY(t_id),
      CONSTRAINT fk_users FOREIGN KEY (u_id) REFERENCES users(u_id),
      CONSTRAINT fk_bus FOREIGN KEY (b_id) REFERENCES bus(b_id),
