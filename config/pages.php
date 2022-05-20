@@ -13,6 +13,7 @@
     // Link / Pages
     const PAGES = array(
         'home' => DOMAIN . '/home.php',
+        'shuttle' => DOMAIN . '/bus_booking.php',
         'login' => DOMAIN . '/login.php',
         'admin' => DOMAIN . '/adminPanel.php',
         'logout' => DOMAIN . '/user/logout.php',
