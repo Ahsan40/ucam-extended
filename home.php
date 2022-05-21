@@ -50,19 +50,19 @@
 		<span><a href="#" style="text-decoration: none; color: black">Home</a></span>
 	</div>
 	<div id="Student_Accounts">
-		<span>Student Accounts</span>
+		<span><a href="news feed.php" style="text-decoration: none; color:black;">News Feed</a></span>
 	</div>
 	<div id="Transport_Registration">
-		<span>Transport Registration</span>
-	</div>
-	<div id="Vaccine_Status" onclick="application.goToTargetView(event)">
-		<span>News Feed</span>
-	</div>
-	<div id="Registration">
 		<span><a href="table.php" style="text-decoration: none; color: black">Preferred Time</a></span>
 	</div>
-	<div onclick="application.goToTargetView(event)" id="Bus_Seat_Booking">
+	<div id="Vaccine_Status" onclick="application.goToTargetView(event)">
 		<span><a href="bus_booking.php" style="text-decoration: none; color:black;">Bus Seat Booking</a></span>
+	</div>
+	<div id="Registration">
+		
+	</div>
+	<div onclick="application.goToTargetView(event)" id="Bus_Seat_Booking">
+		
 	</div>
 
 	
