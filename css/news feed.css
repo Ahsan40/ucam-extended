@@ -1,0 +1,520 @@
+.mediaViewInfo {
+    --web-view-name: Web 1920 – 8;
+    --web-view-id: Web_1920__8;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: Web_1920__8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#Web_1920__8 {
+    position: absolute;
+    width: 1920px;
+    height: 1078px;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+    --web-view-name: Web 1920 – 8;
+    --web-view-id: Web_1920__8;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+#UIU_Logo {
+    position: absolute;
+    width: 280px;
+    height: 55px;
+    left: 46px;
+    top: 30px;
+    overflow: visible;
+}
+#Rectangle_1 {
+    fill: rgba(242,242,242,1);
+}
+.Rectangle_1 {
+    position: absolute;
+    overflow: visible;
+    width: 1931px;
+    height: 50px;
+    left: 0px;
+    top: 102px;
+}
+#Rectangle_4 {
+    fill: rgba(255,232,191,1);
+    stroke: rgba(255,232,191,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_4 {
+    position: absolute;
+    overflow: visible;
+    width: 1941px;
+    height: 4px;
+    left: 0px;
+    top: 152px;
+}
+#Home {
+    left: 50px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 36px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Student_Accounts {
+    left: 139px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 104px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Transport_Registration {
+    left: 296px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 130px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Vaccine_Status {
+    left: 479px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 87px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Registration {
+    left: 619px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 70px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Bus_Seat_Booking {
+    left: 742px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 102px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Bus_ {
+    left: 909px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 26px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Rectangle_77 {
+    fill: rgba(238,238,238,1);
+}
+.Rectangle_77 {
+    position: absolute;
+    overflow: visible;
+    width: 1726px;
+    height: 77px;
+    left: 169px;
+    top: 269px;
+}
+#istockphoto-1317804584-170667a {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    left: 67px;
+    top: 269px;
+    overflow: visible;
+}
+#Any_message_Post_here {
+    opacity: 0.46;
+    left: 208px;
+    top: 291px;
+    position: absolute;
+    overflow: visible;
+    width: 286px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(91,89,89,1);
+}
+#Rectangle_78 {
+    opacity: 0.55;
+    fill: rgba(254,147,101,1);
+}
+.Rectangle_78 {
+    position: absolute;
+    overflow: visible;
+    width: 1970px;
+    height: 3px;
+    left: 3px;
+    top: 384px;
+}
+#istockphoto-1317804584-170667a_y {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    left: 71px;
+    top: 420px;
+    overflow: visible;
+}
+#This_is_the_teacher_to_whom_st {
+    left: 175px;
+    top: 494px;
+    position: absolute;
+    overflow: visible;
+    width: 577px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: rgba(91,89,89,1);
+}
+#Today_0105_Pm {
+    opacity: 0.75;
+    left: 951px;
+    top: 457px;
+    position: absolute;
+    overflow: visible;
+    width: 153px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(91,89,89,1);
+}
+#images_1 {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    left: 76px;
+    top: 617px;
+    overflow: visible;
+}
+#Mon_1156_Pm {
+    opacity: 0.75;
+    left: 951px;
+    top: 1057px;
+    position: absolute;
+    overflow: visible;
+    width: 139px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(91,89,89,1);
+}
+#images {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    left: 67px;
+    top: 788px;
+    overflow: visible;
+}
+#Fri_1105_Pm {
+    opacity: 0.75;
+    left: 951px;
+    top: 817px;
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(91,89,89,1);
+}
+#Rectangle_79 {
+    opacity: 0.55;
+    fill: rgba(254,147,101,1);
+}
+.Rectangle_79 {
+    position: absolute;
+    overflow: visible;
+    width: 1970px;
+    height: 3px;
+    left: -46px;
+    top: 581px;
+}
+#Rectangle_80 {
+    opacity: 0.55;
+    fill: rgba(254,147,101,1);
+}
+.Rectangle_80 {
+    position: absolute;
+    overflow: visible;
+    width: 1970px;
+    height: 3px;
+    left: 17px;
+    top: 761px;
+}
+#Rectangle_81 {
+    opacity: 0.55;
+    fill: rgba(254,147,101,1);
+}
+.Rectangle_81 {
+    position: absolute;
+    overflow: visible;
+    width: 1970px;
+    height: 3px;
+    left: 3px;
+    top: 958px;
+}
+#Farida_Khan_Lecture_United_Int {
+    left: 175px;
+    top: 424px;
+    position: absolute;
+    overflow: visible;
+    width: 400px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(91,89,89,1);
+}
+#Farid_jhsoi_Lecture_United_Int {
+    left: 175px;
+    top: 621px;
+    position: absolute;
+    overflow: visible;
+    width: 400px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(91,89,89,1);
+}
+#This_is_the_teacher_to_whom_st_ba {
+    left: 175px;
+    top: 697px;
+    position: absolute;
+    overflow: visible;
+    width: 544px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: rgba(91,89,89,1);
+}
+#Kabir_Rahman_Lecture_United_In {
+    left: 175px;
+    top: 787px;
+    position: absolute;
+    overflow: visible;
+    width: 400px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(91,89,89,1);
+}
+#This_is_the_teacher_to_whom_st_bc {
+    left: 175px;
+    top: 860px;
+    position: absolute;
+    overflow: visible;
+    width: 577px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: rgba(91,89,89,1);
+}
+#images_1_bd {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    left: 76px;
+    top: 994px;
+    overflow: visible;
+}
+#Farid_jhsoi_Lecture_United_Int_be {
+    left: 175px;
+    top: 998px;
+    position: absolute;
+    overflow: visible;
+    width: 400px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    color: rgba(91,89,89,1);
+}
+#This_is_the_teacher_to_whom_st_bf {
+    left: 175px;
+    top: 1074px;
+    position: absolute;
+    overflow: visible;
+    width: 544px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: rgba(91,89,89,1);
+}
+#Mon_1156_Pm_bg {
+    opacity: 0.75;
+    left: 951px;
+    top: 637px;
+    position: absolute;
+    overflow: visible;
+    width: 139px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(91,89,89,1);
+}
+#Group_60 {
+    position: absolute;
+    width: 58px;
+    height: 18px;
+    left: 1000px;
+    top: 118px;
+    overflow: visible;
+}
+#Newsfeed {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 59px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(91,89,89,1);
+}
+#Rectangle_83 {
+    fill: rgba(254,147,101,1);
+}
+.Rectangle_83 {
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+    position: absolute;
+    overflow: visible;
+    width: 247px;
+    height: 78px;
+    left: 1392px;
+    top: 181px;
+}
+#Rectangle_84 {
+    fill: rgba(107,100,100,1);
+}
+.Rectangle_84 {
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+    position: absolute;
+    overflow: visible;
+    width: 247px;
+    height: 78px;
+    left: 1658px;
+    top: 181px;
+}
+#All {
+    left: 1490px;
+    top: 192px;
+    position: absolute;
+    overflow: visible;
+    width: 36px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgba(255,255,255,1);
+}
+#Only_Faculty {
+    left: 1692px;
+    top: 192px;
+    position: absolute;
+    overflow: visible;
+    width: 165px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgba(255,255,255,1);
+}

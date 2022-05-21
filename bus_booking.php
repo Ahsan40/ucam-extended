@@ -38,7 +38,7 @@
 		</rect>
 	</svg>
 	<div id="Logout">
-		<span>Logout</span>
+		<span><button style="background-color: #F2531C; color: white">Logout</button></span>
 	</div>
 	<div id="Text">
 		<span>/</span>
@@ -47,22 +47,22 @@
 		<span>01118234</span>
 	</div>
 	<div onclick="application.goToTargetView(event)" id="Home">
-		<span>Home</span>
+		<span><a href="home.php" style="text-decoration: none; color: black">Home</a></span>
 	</div>
 	<div id="Student_Accounts">
-		<span>Student Accounts</span>
+		<span><a href="news feed.php" style="text-decoration: none; color: black">News Feed</a></span>
 	</div>
 	<div id="Transport_Registration">
-		<span>Transport Registration</span>
+		<span><a href="table.php" style="text-decoration: none; color: black">Preferred Time</a></span>
 	</div>
 	<div id="Vaccine_Status" onclick="application.goToTargetView(event)">
-		<span>Vaccine Status</span>
+		<span><a href="bus_booking.php" style="text-decoration: none; color:black;">Bus Seat Booking</a></span>
 	</div>
 	<div id="Registration">
-		<span>Registration</span>
+		
 	</div>
 	<div id="Bus_Seat_Booking">
-		<span>Bus Seat Booking</span>
+		
 	</div>
 	<div id="n_679536_steering_2_fill_icon">
 		<svg class="Path_3" viewBox="0 0 80.181 80.181">
