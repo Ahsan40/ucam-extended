@@ -2906,3 +2906,4 @@
  }
  
  window.application = new Application();
+
