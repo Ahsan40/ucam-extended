@@ -12,9 +12,10 @@
 
     // Link / Pages
     const PAGES = array(
-        'home' => DOMAIN . '/index.php',
+        'home' => DOMAIN . '/home.php',
+        'shuttle' => DOMAIN . '/bus_booking.php',
         'login' => DOMAIN . '/login.php',
-        'admin' => DOMAIN . '/admin/',
+        'admin' => DOMAIN . '/adminPanel.php',
         'logout' => DOMAIN . '/user/logout.php',
         'signup' => DOMAIN . '/signup.php',
         'profile' => DOMAIN . '/user/profile.php'
@@ -25,6 +26,8 @@
         'connection' => INC_DOMAIN . '/include/connection.php',
         'main-function' => INC_DOMAIN . '/include/main-function.php',
         'login-function' => INC_DOMAIN . '/include/login-function.php',
+        'shuttle-admin-function' => INC_DOMAIN . '/include/shuttle-admin-function.php',
+        'shuttle-student-function' => INC_DOMAIN . '/include/shuttle-student-function.php',
         'signup-function' => INC_DOMAIN . '/include/signup-function.php',
         'nav-main-template' => INC_DOMAIN . '/template/nav-main.php',
         'nav-logged-template' => INC_DOMAIN . '/template/nav-menu-for-logged-user.php',
