@@ -119,4 +119,3 @@ function updatePost($conn, $POST)
         }
 
 }
-?>
