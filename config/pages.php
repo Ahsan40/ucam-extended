@@ -25,6 +25,7 @@
     const INCLUDES = array(
         'connection' => INC_DOMAIN . '/include/connection.php',
         'main-function' => INC_DOMAIN . '/include/main-function.php',
+        'course-function' => INC_DOMAIN . '/include/course-function.php',
         'login-function' => INC_DOMAIN . '/include/login-function.php',
         'shuttle-admin-function' => INC_DOMAIN . '/include/shuttle-admin-function.php',
         'shuttle-student-function' => INC_DOMAIN . '/include/shuttle-student-function.php',

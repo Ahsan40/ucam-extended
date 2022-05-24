@@ -39,3 +39,21 @@ CREATE TABLE ticket (
      CONSTRAINT fk_bus FOREIGN KEY (b_id) REFERENCES bus(b_id),
      CONSTRAINT fk_shift FOREIGN KEY (s_id) REFERENCES s_shift(s_id)
 );
+
+CREATE TABLE courses (
+     c_id INT AUTO_INCREMENT PRIMARY KEY,
+     name varchar(255) NOT NULL,
+     code varchar(255) UNIQUE NOT NULL,
+     credit INT NOT NULL
+);
+
+CREATE TABLE section (
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     name varchar(255) NOT NULL,
+     faculty varchar(255) NOT NULL
+);
+
+CREATE TABLE p_time (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    time time NOT NULL
+);

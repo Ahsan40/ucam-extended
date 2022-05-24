@@ -1,3 +1,15 @@
+<?php
+    require_once './header.php';
+    $user_data = check_login($conn);
+    
+    if(isset($_POST['book_seat']))
+    {
+        //echo "Send Massage";
+        book_ticket($conn, $_POST);
+        header("Location: " . PAGES['shuttle']);
+    }
+	?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -92,28 +104,39 @@
                 <th scope="col" class="text-center">Group</th>
                 <th scope="col" class="text-center">Offered <br> Trimester</th>
                 <th scope="col" class="text-center">Mandatory</th>
-                <th scope="col" class="text-center">Action</th>
+                <!-- <th scope="col" class="text-center">Action</th> -->
                 <th scope="col" class="text-center">Section</th>
                 <th scope="col" class="text-center">Preferred Time</th>
               </tr>
             </thead>
             <tbody>
+            <?php
+                      $query2 ="SELECT * FROM courses";
+                      $result2 =  $conn->query($query2);
+                      ?>
                   <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">1</th>
+                  
+                  <?php while ($line = mysqli_fetch_assoc($result2)){ ?> 
+                    <th class="text-center" scope="row"><?php echo $line['c_id'];?></th>
+                    
                     <td >
-                      MATH 2183
+                    <?php echo $line['code'];?>
                     </td>
-                    <td >Calculus and Linear Algebra</td>
-                    <td align="center">3.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">4th</td>
+                    <td ><?php echo $line['name'];?></td>
+                    <td align="center"><?php echo $line['credit'];?></td>
+                    <td>--</td>]
                     <td align="center">
                       <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
                     </td>
                     <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
+                    <!-- <td ></td> -->
                     <td>
-                      <select class="dropdown"> 
+                    <?php
+                      $query ="SELECT * FROM section";
+                      $result =  $conn->query($query);
+                      ?>
+
+                      <select class="dropdown"  name="section"> 
                         <label
                           class="btn dropdown-toggle border-end text-center"
                           type="button"
@@ -122,33 +145,21 @@
                           aria-expanded="false"
                         ></label>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-10:00" selected>8:30-10:00am</option>
-                          <option value="10:05-11:35">10:05-11:35am</option>
-                          <option value="11:40-1:10">11:40-1:10pm</option>
-                          <option value="1:30-3:00">1:30-3:00pm</option>
-                          <option value="3:00-4:30">3:00-4:30pm</option>
+
+                        <?php while ($line = mysqli_fetch_assoc($result)){ ?> 
+                        <option name="id" value="<?php echo $line['id'];?>"> <?php echo $line['name'];?>
+                        </option>   <?php } ?> 
+
                         </ul>
                       </select>
                     </td>
-                  </tr>
-                
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">2</th>
-                    <td >
-                      CSE 2118
-                    </td>
-                    <td >	Advanced Object Oriented Programming Laboratory</td>
-                    <td align="center">1.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">4th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
                     <td>
-                    <select class="dropdown"> 
+                    <?php
+                      $query ="SELECT * FROM p_time";
+                      $result =  $conn->query($query);
+                      ?>
+
+                      <select class="dropdown"  name="s_time"> 
                         <label
                           class="btn dropdown-toggle border-end text-center"
                           type="button"
@@ -157,181 +168,16 @@
                           aria-expanded="false"
                         ></label>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <option value="8:30-11:00" selected>8:30-11:00am</option>
-                          <option value="11:00-1:30">11:00-1:30pm</option>
-                          <option value="2:00-4:30">2:00-4:30pm</option>
+
+                        <?php while ($line = mysqli_fetch_assoc($result)){ ?> 
+                        <option name="id" value="<?php echo $line['id'];?>"> <?php echo $line['time'];?>
+                        </option>   <?php } ?> 
+
                         </ul>
                       </select>
                     </td>
                   </tr>
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">3</th>
-                    <td >
-                      MATH 2201
-                    </td>
-                    <td >Coordinate Geometry and Vector Analysis</td>
-                    <td align="center">3.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">5th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
-                    <td>
-                    <select class="dropdown"> 
-                        <label
-                          class="btn dropdown-toggle border-end text-center"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        ></label>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-10:00" selected>8:30-10:00am</option>
-                          <option value="10:05-11:35">10:05-11:35am</option>
-                          <option value="11:40-1:10">11:40-1:10pm</option>
-                          <option value="1:30-3:00">1:30-3:00pm</option>
-                          <option value="3:00-4:30">3:00-4:30pm</option>
-                        </ul>
-                      </select>
-                    </td>
-                  </tr>
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">4</th>
-                    <td >
-                      CSE 2215
-                    </td>
-                    <td >	Data Structure and Algorithms I</td>
-                    <td align="center">3.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">5th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
-                    <td>
-                    <select class="dropdown"> 
-                        <label
-                          class="btn dropdown-toggle border-end text-center"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        ></label>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-10:00" selected>8:30-10:00am</option>
-                          <option value="10:05-11:35">10:05-11:35am</option>
-                          <option value="11:40-1:10">11:40-1:10pm</option>
-                          <option value="1:30-3:00">1:30-3:00pm</option>
-                          <option value="3:00-4:30">3:00-4:30pm</option>
-                        </ul>
-                      </select>
-                    </td>
-                  </tr>
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">5</th>
-                    <td >
-                      CSE 2216
-                    </td>
-                    <td >	Data Structure and Algorithms I Laboratory</td>
-                    <td align="center">1.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">5th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
-                    <td>
-                    <select class="dropdown"> 
-                        <label
-                          class="btn dropdown-toggle border-end text-center"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        ></label>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-11:00" selected>8:30-11:00am</option>
-                          <option value="11:00-1:30">11:00-1:30pm</option>
-                          <option value="2:00-4:30">2:00-4:30pm</option>
-                        </ul>
-                      </select>
-                    </td>
-                  </tr>
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">6</th>
-                    <td >
-                      MATH 2205
-                    </td>
-                    <td >	Probability and Statistics</td>
-                    <td align="center">3.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">6th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
-                    <td>
-                    <select class="dropdown"> 
-                        <label
-                          class="btn dropdown-toggle border-end text-center"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        ></label>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-10:00" selected>8:30-10:00am</option>
-                          <option value="10:05-11:35">10:05-11:35am</option>
-                          <option value="11:40-1:10">11:40-1:10pm</option>
-                          <option value="1:30-3:00">1:30-3:00pm</option>
-                          <option value="3:00-4:30">3:00-4:30pm</option>
-                        </ul>
-                      </select>
-                    </td>
-                  </tr>
-    
-                  <tr style="background-color: whitesmoke;">
-                    <th class="text-center" scope="row">7</th>
-                    <td >
-                      EEE 2123
-                    </td>
-                    <td >	Electronics</td>
-                    <td align="center">3.00</td>
-                    <td>--</td>
-                    <td style="text-align: center;  ">6th</td>
-                    <td align="center">
-                      <span disabled="disabled"> <input type="checkbox" disabled="disabled"> </span>
-                    </td>
-                    <td align="center"> <a style="text-decoration: none;" href="">Click To Take</a> </td>
-                    <td ></td>
-                    <td>
-                    <select class="dropdown"> 
-                        <label
-                          class="btn dropdown-toggle border-end text-center"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        ></label>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <option value="8:30-10:00" selected>8:30-10:00am</option>
-                          <option value="10:05-11:35">10:05-11:35am</option>
-                          <option value="11:40-1:10">11:40-1:10pm</option>
-                          <option value="1:30-3:00">1:30-3:00pm</option>
-                          <option value="3:00-4:30">3:00-4:30pm</option>
-                        </ul>
-                      </select>
-                    </td>
-                  </tr>
+                  <?php } ?> 
     
             </tbody>
           </table>

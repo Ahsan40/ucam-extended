@@ -1,3 +1,7 @@
+<?php
+    require_once './header.php';
+	?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +42,7 @@
 		</rect>
 	</svg>
 	<div id="Logout">
-		<span><button style="background-color: #F2531C; color: white">Logout</button></span>
+		<span><button onclick="window.location.href='<?php echo PAGES['logout']; ?>'" style="background-color: #F2531C; color: white">Logout</button></span>
 	</div>
 	<div id="Text">
 		<span>/</span>
@@ -59,7 +63,7 @@
 		<span><a href="bus_booking.php" style="text-decoration: none; color:black;">Bus Seat Booking</a></span>
 	</div>
 	<div id="Registration">
-		
+		<span><a href="vaccine.php" style="text-decoration: none; color:black;">Vaccine Status</a></span>
 	</div>
 	<div onclick="application.goToTargetView(event)" id="Bus_Seat_Booking">
 		

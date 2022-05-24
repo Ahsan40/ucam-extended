@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 }
 ?>
 
+    <link rel="stylesheet" href="<?php echo CSS['styles.css']."?".time(); ?>">
 <title>Sign In</title>
 </head>
 
