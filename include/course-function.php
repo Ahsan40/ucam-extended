@@ -1,4 +1,47 @@
 <?php
+function fetchAllCourse($conn) {
+    $query = "SELECT * FROM course";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        return $result; // returning mysqli object
+    else
+        echo "Unknown Error!";
+    die();
+}
+
+
+function fetchAllCoursesEntity($conn) {
+    $query = "SELECT * FROM courses";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        return $result; // returning mysqli object
+    else
+        echo "Unknown Error!";
+    die();
+}
+
+
+function fetchAllSectionEntity($conn) {
+    $query = "SELECT * FROM section";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        return $result; // returning mysqli object
+    else
+        echo "Unknown Error!";
+    die();
+}
+
+
+function fetchAllTimeEntity($conn) {
+    $query = "SELECT * FROM p_time";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        return $result; // returning mysqli object
+    else
+        echo "Unknown Error!";
+    die();
+}
+
 function addCourse ($conn, $POST) {
     $id = $POST['b_id'];
     $section = $POST['s_id'];
@@ -48,6 +91,18 @@ function getTime($conn, $time_id) {
     $result = mysqli_query($conn, $query);
     if ($result)
         return mysqli_fetch_assoc($result);
+    else
+        echo "Unknown Error!";
+    die();
+}
+
+function addTime ($conn, $POST) {
+    $time = $POST['add_time_value'];
+
+    $query = "INSERT INTO p_time(time) ( $time)";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        header("Location: " . PAGES['add-course']);
     else
         echo "Unknown Error!";
     die();
