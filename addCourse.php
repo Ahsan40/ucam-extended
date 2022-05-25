@@ -3,23 +3,15 @@
     $user_data = check_login($conn);
     require_once INCLUDES['course-function'];
 
-    if(isset($_POST['book_seat']))
+    if(isset($_POST['add_full_section_btn']))
     {
-        //echo "Send Massage";
-        book_ticket($conn, $_POST);
-        header("Location: " . PAGES['shuttle']);
+        addCourse($conn, $_POST);
+        header("Location: " . PAGES['add-course']);
     }
 ?>
 
-
-<html>
-<head>
     <link rel="stylesheet" href="<?php echo CSS['modal.css']."?".time(); ?>">
     <script type="text/javascript" src="<?php echo JS['toggle-visibility.js']; ?>"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
