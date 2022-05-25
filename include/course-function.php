@@ -107,3 +107,15 @@ function addTime ($conn, $POST) {
         echo "Unknown Error!";
     die();
 }
+
+
+
+function courseCount ($conn) {
+    $query = "SELECT COUNT(*) AS C FROM course";
+    $result = mysqli_query($conn, $query);
+    if ($result)
+        return mysqli_fetch_assoc($result);
+    else
+        echo "Unknown Error!";
+    die();
+}

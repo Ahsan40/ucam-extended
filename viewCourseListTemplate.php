@@ -1,6 +1,12 @@
 
 <?php
 $all_course =  fetchAllCourse($conn);
+if(isset($_POST['book_seat']))
+{
+    //echo "Send Massage";
+    book_ticket($conn, $_POST);
+    header("Location: " . PAGES['shuttle']);
+}
 ?>
 
 <table>
@@ -52,3 +58,4 @@ $all_course =  fetchAllCourse($conn);
     <?php } ?>
     </tbody>
     <table/>
+<p> Total Course: <?php courseCount($conn)['C'];?></p>
