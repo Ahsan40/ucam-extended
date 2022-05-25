@@ -7,7 +7,7 @@
             <label for="files">Select A Course</label>
             <select>
                 <?php while ($line = mysqli_fetch_assoc(fetchAllCoursesEntity($conn))){ ?>
-                    <option name="add_course_name" value="<?php echo $line['c_id'];?>">
+                    <option name="c_id" value="<?php echo $line['c_id'];?>">
                         <?php echo $line['code']." ".$line['name'];?>
                     </option>
                 <?php } ?>
@@ -17,7 +17,7 @@
             <label for="files">Select A Section</label>
             <select>
                 <?php while ($line = mysqli_fetch_assoc(fetchAllSectionEntity($conn))){ ?>
-                    <option name="add_section_name" value="<?php echo $line['id'];?>">
+                    <option name="s_id" value="<?php echo $line['id'];?>">
                         <?php echo $line['name'].". ".$line['faculty'];?>
                     </option>
                 <?php } ?>
@@ -27,7 +27,7 @@
             <label for="files">Select A Time</label>
             <select>
                 <?php while ($line = mysqli_fetch_assoc(fetchAllTimeEntity($conn))){ ?>
-                    <option name="add_time_name" value="<?php echo $line['id'];?>">
+                    <option name="t_id" value="<?php echo $line['id'];?>">
                         <?php echo $line['time'];?>
                     </option>
                 <?php } ?>

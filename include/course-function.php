@@ -43,9 +43,9 @@ function fetchAllTimeEntity($conn) {
 }
 
 function addCourse ($conn, $POST) {
-    $id = $POST['b_id'];
+    $id = $POST['c_id'];
     $section = $POST['s_id'];
-    $time = $POST['s_id'];
+    $time = $POST['t_id'];
 
         $query = "INSERT INTO course(course_id, section_id, time_id ) VALUES ($id, $section, $time)";
         $result = mysqli_query($conn, $query);

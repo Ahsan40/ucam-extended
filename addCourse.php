@@ -3,11 +3,10 @@
     $user_data = check_login($conn);
     require_once INCLUDES['course-function'];
 
-    if(isset($_POST['book_seat']))
+    if(isset($_POST['add_full_section_btn']))
     {
-        //echo "Send Massage";
-        book_ticket($conn, $_POST);
-        header("Location: " . PAGES['shuttle']);
+        addCourse($conn, $_POST);
+        header("Location: " . PAGES['add-course']);
     }
 ?>
 
