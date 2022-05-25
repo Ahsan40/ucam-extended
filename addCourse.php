@@ -1,13 +1,14 @@
 <?php
-require_once './header.php';
-$user_data = check_login($conn);
+    require_once './header.php';
+    $user_data = check_login($conn);
+    require_once INCLUDES['course-function'];
 
-if(isset($_POST['book_seat']))
-{
-    //echo "Send Massage";
-    book_ticket($conn, $_POST);
-    header("Location: " . PAGES['shuttle']);
-}
+    if(isset($_POST['book_seat']))
+    {
+        //echo "Send Massage";
+        book_ticket($conn, $_POST);
+        header("Location: " . PAGES['shuttle']);
+    }
 ?>
 
 
@@ -22,53 +23,14 @@ if(isset($_POST['book_seat']))
     <title>Document</title>
 </head>
 <body>
-<div id="add-course-popup" class="<?php echo (isset($id) ? 'show': 'hide'); ?>">
-    <div class="modal-content">
-        <button onclick="toggleVisibility('add-course-popup')" class="close"> Close </button>
-        <form action="" method="post" enctype="multipart/form-data">
-            <input type="text" name="edit_course_code" value="">
-            <input type="text" name="edit_course_name" value="">
-            <input type="text" name="edit_course_des" value="">
-            <label for="files">Update your File</label>
-            <input type="text" name="course_credit" placeholder="Credit" />
-            <input type="time" id="appt" name="appt">
-            <input type="hidden" name="fk_id" value="<">
-            <input type="hidden" name="fk_address" value="">
-            <input type="submit" value="Update Information" name="edit_btn">
-        </form>
-    </div>
-</div>
-<button type="submit" onclick="toggleVisibility('add-course-popup')" class="new-post-btn"> Add New Course </button>
+<!--Form-->
+<?php require_once INCLUDES['add-full-section-template']; ?>
+<?php require_once INCLUDES['add-time-template']; ?>
+<?php require_once INCLUDES['add-section-template']; ?>
+<?php require_once INCLUDES['add-course-template']; ?>
 
-
-<table>
-    <thead>
-    <tr>
-        <th>SL</th>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Section</th>
-        <th>Time</th>
-    </tr>
-    <thead>
-    <tbody>
-    <tr>
-        <!--SL-->
-    </tr>
-    <tr>
-        <!--Code-->
-    </tr>
-    <tr>
-        <!--Name-->
-    </tr>
-    <tr>
-        <!--Section-->
-    </tr>
-    <tr>
-        <!--Time-->
-    </tr>
-    </tbody>
-    <table/>
+<!--Results-->
+<?php require_once INCLUDES['view-all-course-template']; ?>
 
 </body>
 </html>
