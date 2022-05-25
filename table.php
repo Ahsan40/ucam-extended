@@ -1,13 +1,7 @@
 <?php
     require_once './header.php';
     $user_data = check_login($conn);
-    
-    if(isset($_POST['book_seat']))
-    {
-        //echo "Send Massage";
-        book_ticket($conn, $_POST);
-        header("Location: " . PAGES['shuttle']);
-    }
+
 	?>
 
 <!DOCTYPE html>

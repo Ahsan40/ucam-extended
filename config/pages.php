@@ -14,6 +14,7 @@
     const PAGES = array(
         'home' => DOMAIN . '/home.php',
         'shuttle' => DOMAIN . '/bus_booking.php',
+        'add-course' => DOMAIN . '/addCourse.php',
         'login' => DOMAIN . '/login.php',
         'admin' => DOMAIN . '/adminPanel.php',
         'logout' => DOMAIN . '/user/logout.php',
@@ -37,7 +38,8 @@
 
     // Resources
     const CSS = array(
-        'styles.css' => DOMAIN . '/css/styles.css'
+        'styles.css' => DOMAIN . '/css/styles.css',
+        'modal.css' => DOMAIN . '/css/modal.css'
     );
 
     const JS = array(

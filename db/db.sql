@@ -57,3 +57,12 @@ CREATE TABLE p_time (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     time time NOT NULL
 );
+
+
+CREATE TABLE course (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT REFERENCES courses(c_id),
+    section_id INT REFERENCES section(id),
+    time_id INT REFERENCES p_time(id)
+);
+
